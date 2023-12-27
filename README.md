@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## ⌘ React Flow App Example
 
-## Getting Started
+### Below you'll see what I have implemented inside this app, and how to use it
 
-First, run the development server:
+Everything I did was according to best practices from [React Flow documentation](https://reactflow.dev/api-reference).
+
+I used Typescript and types from React Flow everywhere and commented all parts of my code for best reading experience.
+
+In this application, the main goal was to implement logic flow between nodes. 
+Thus, you'll see how to:
+  - Add your own logic to onConnect() function
+  - Add validation using isValidConnection() function
+  - Pass state value using zustand
+
+For nodes and edges, you'll find implementation of:
+  - custom addNode() function with different types
+  - duplicateNode() function
+  - deleteNode() function
+  - deleteEdge() function
+
+Finally, you'll see how to implement Context Menus for nodes, edges, and canvas itself:
+  - custom ContextMenu component with dynamic types and actions for each type
+  - onNodeContextMenu(), onEdgeContextMenu(), and onPaneContextMenu() functions
+  - onPaneClick() function for automatically closing Context Menu
+
+### How to launch
+
+Clone repo:
+```bash
+git clone https://github.com/markushha/reactflow
+```
+
+Then, install packages
+
+```bash
+npm i
+# or
+yarn
+```
+
+Next, launch the development server
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Finally, open [http://localhost:3000](http://localhost:3000) with your browser to see the application
