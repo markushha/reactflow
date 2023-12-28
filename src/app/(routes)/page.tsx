@@ -154,8 +154,8 @@ export default function Home() {
       const pane = ref.current.getBoundingClientRect();
       setMenu({
         id: `canvas-${event.clientX}-${event.clientY}`,
-        top: event.clientY < pane.height - 200 && event.clientY - 100,
-        left: event.clientX < pane.width - 200 && event.clientX - 200,
+        top: event.clientY < pane.height - 200 && event.clientY,
+        left: event.clientX < pane.width - 200 && event.clientX,
         right: event.clientX >= pane.width - 200 && pane.width - event.clientX,
         bottom:
           event.clientY >= pane.height - 200 && pane.height - event.clientY,
