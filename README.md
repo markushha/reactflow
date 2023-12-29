@@ -12,7 +12,7 @@ Thus, you'll see how to:
   - Add validation using isValidConnection() function
   - Pass state value using zustand
 
-For nodes and edges, you'll find implementation of:
+For nodes and edges, you'll find an implementation of:
   - custom addNode() function with different types
   - duplicateNode() function
   - deleteNode() function
